@@ -1,0 +1,12 @@
+Go inside Docker mysql
+1.sudo docker ps
+2.sudo docker exec-it f24f(image name of current docker) bash
+3.cd mysql
+4.set global general_log =1;
+Now exit mysql
+Go inside this path after enabling general log
+root@e79f4fbd984c:/# cd var/lib/mysql
+root@e79f4fbd984c:/var/lib/mysql# ls
+debian-5.5.flag  e79f4fbd984c.log  ib_logfile0	ib_logfile1  ibdata1  mfin_db  mfin_db_data  mysql  mysql_upgrade_info	performance_schema
+root@e79f4fbd984c:/var/lib/mysql# tail -f e79f4fbd984c.log
+tail -F e79f4fbd984c.log | grep insert(Insert lai filter garna )
